@@ -206,3 +206,6 @@ Para excluir um risco, envie uma requisição **DELETE** para `http://localhost:
 
 ---
 
+![image](https://github.com/user-attachments/assets/b45f5088-7e48-47f8-8b42-9d33c0b13335)
+
+
