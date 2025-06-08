@@ -206,3 +206,19 @@ Para excluir um risco, envie uma requisição **DELETE** para `http://localhost:
 
 ---
 
+### Diagrama de Arquitetura do Sistema SAFE.Guard
+
+![Diagrama de Arquitetura](diagrama_arquitetura_safe_guard_final.png)
+
+> **Descrição:**  
+> O sistema SAFE.Guard é composto por sensores IoT conectados a uma API RESTful desenvolvida em .NET. Essa API recebe os dados, processa riscos e interage com o banco de dados Oracle. Os dados são acessados por uma aplicação mobile (SAFE.App) e um painel web (SAFE.Dashboard), fornecendo alertas e informações em tempo real.
+
+---
+
+### Observações técnicas (edite abaixo conforme necessário):
+
+- Os sensores se comunicam diretamente com a API por meio de requisições POST.
+- A camada de **Controllers** trata as requisições e delega a lógica de negócio aos **Services**.
+- O banco **Oracle** é acessado via ADO.NET.
+- O sistema é modular, com entidades como `Estacao`, `Sensor`, `Leitura`, `Risco` e `Alerta`.
+- O front-end consome os dados da API em tempo real para exibição visual.
